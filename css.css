@@ -1,0 +1,779 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 1px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.header { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 60px; 
+    box-shadow: 0 0 10px gray; 
+    z-index: 10;
+    background: url('l.png') no-repeat center;
+    background-size: cover; /* Image ko full header cover karne ke liye */
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Book Title & Price */
+.book-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -5px;
+    text-align: left;
+    margin-left: 13px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -10px;
+    margin-left: 4px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745;
+    
+}
+
+        .discount {
+            font-size: 23px;
+            color: #028C03;
+            font-weight: bold;
+            margin-left: 0px;
+            margin-bottom: px;
+            margin-right: 2px;
+        }
+.discount::before {
+    content: "";
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url('D.jpg') no-repeat center;
+    background-size: contain;
+    margin-right: 2px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 25px;
+    margin-right: 2px;
+}
+
+/* Coupon Section */
+.coupon-container {
+    margin-top: 1px;
+    margin-left: 30px;
+}
+
+.coupon-box {
+    display: flex;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    width:90%;
+    align-items: center;
+}
+
+.coupon-box input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.coupon-box button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.coupon-box:hover {
+    border-color: #007bff;
+}
+
+.coupon-box input:hover, .coupon-box input:focus {
+    background: #eef5ff;
+}
+
+.coupon-box button:hover {
+    background: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Line Separator */
+.line {
+    width: 100%;
+    height: 2px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+        .b {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff0000, #ff7300);
+            color: white;
+            box-shadow: 0px 0px 15px rgba(255, 115, 0, 0.8);
+        }
+
+        /* C: Scrollable Book Section */
+        .c {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+            white-space: nowrap;
+            scrollbar-width: none; /* Firefox Hide Scrollbar */
+        }
+        .c::-webkit-scrollbar {
+            display: none; /* Chrome Hide Scrollbar */
+        }
+
+        /* D: Book Box */
+        .d {
+            flex: 0 0 auto;
+            width: 180px;
+            text-align: center;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 115, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .d:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 115, 0, 0.9);
+        }
+
+        /* E: Image */
+        .e {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* F: Title */
+        .f {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* G: Price */
+        .g {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+            background: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .g del {
+            color: red;
+            margin-right: 5px;
+        }
+        .g span {
+            color: #28a745;
+        }
+
+        /* H: Image Zoom Overlay */
+        .h {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .h img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        /* I: Navigation Buttons */
+        .i {
+            font-size: 30px;
+            background: rgba(255, 115, 0, 0.9);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+        .left {
+            left: 5%;
+        }
+        .right {
+            right: 5%;
+        }
+
+.close-fullscreen {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.full-width-images {
+    display: block; /* Images ek ke niche ek lane ke liye */
+    padding-bottom: 0;
+}
+
+.full-width-images img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-bottom: 0; /* Gap hata diya */
+    display: block; /* Ensure no extra space */
+}
+
+  .bottom-buttons { position: fixed; bottom: 0; left: 0; width: 100%; display: flex; z-index: 10; }
+    .bottom-buttons button { flex: 1; text-align: center; padding: 15px; font-size: 18px; font-weight: bold; color: white; text-decoration: none; border: none; cursor: pointer; }
+    .buy-now { background: #ff5733; }
+    .contact { background: #28a745; display: flex; align-items: center; justify-content: center; gap: 8px; }
+</style>
+
+.contact, .buy-now, .next-btn {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact {
+    background: #25d366;
+    color: white;
+}
+
+.buy-now {
+    background: #ff5733;
+    color: white;
+}
+
+.next-btn {
+    background: #007bff;
+    color: white;
+}
+
+.contact:hover {
+    background: #1ebe5d;
+}
+
+.buy-now:hover {
+    background: #d84315;
+}
+
+.next-btn:hover {
+    background: #0056b3;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 60px; /* Header ke liye jagah chhod di */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px); /* Total height se 60px kam */
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999; 
+    
+}
+
+/* Centered Popup Content */
+.popup-content {
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Thoda Niche Space for Text */
+.popup-content > * {
+    margin-top: 15px; /* Saare elements ke beech thoda gap */
+}
+
+/* Close Button */
+#closePopup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    background: none;
+    border: none;
+}
+
+/* Payment Section */
+#paymentSection {
+    text-align: center;
+    padding-top: 10px;  /* Niche Space for Better Alignment */
+}
+
+/* Payment Heading */
+#paymentHeader {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Payment Instructions */
+#paymentInstructions {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* QR Code Box */
+#qrCode {
+    width: 250px;
+    height: 250px;
+    background: #f3f3f3;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto; /* Aur Niche Space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Amount Display */
+#amountDisplay {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #000;
+}
+
+/* Pay UPI Button */
+#payUPI {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#payUPI:hover {
+    background: #0056b3;
+}
+
+#status {
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+        #status span {
+            color: red;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+/* Input Container */
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 15px auto;
+}
+
+/* Input Fields */
+.input-container input {
+  width: 100%;
+  padding: 18px 12px 6px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  background: transparent;
+  transition: 0.3s;
+}
+
+/* Floating Label */
+.input-container label {
+  position: absolute;
+  top: -3px;
+  left: 12px;
+  font-size: 16px;
+      background: rgba(255, 255, 255, 0.8); 
+border: .3px solid black;
+    border-radius: 3px;
+  transition: 0.3s ease;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+}
+
+
+/* Input Focus Effect */
+.input-container input:focus {
+  border-color: #2874F0;
+  box-shadow: 0 0 4px rgba(40, 116, 240, 0.5);
+    
+}
+
+/* Button Container */
+.button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Continue Button */
+#nextBtn {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+#nextBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+            .floating-container {
+            position: fixed;
+            top: 70px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .counter {
+            position: absolute;
+            top: 37px;
+            font-size: 7.4px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .share-btn {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px blue;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+            font-size: 10px;
+        }
+        
+        .share-btn img {
+            width: 23px;
+            height: 23px;
+        }
+        
+        .share-count {
+            font-size: 8px;
+            font-weight: bold;
+            color: black;
+            margin-top: 2px;
+        }
+
+.xx {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222; /* Dark Popup Background */
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(255, 115, 0, 0.8); /* Glow Effect */
+    border-radius: 10px;
+    text-align: center;
+    width: 320px;
+    color: white;
+    border: 2px solid rgba(255, 115, 0, 0.8);
+}
+
+/* Heading */
+.xx h2 {
+    font-size: 20px;
+    color: #ff7300;
+    text-shadow: 0 0 10px rgba(255, 115, 0, 0.8);
+}
+
+/* Input Fields */
+.input-group input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(255, 115, 0, 0.5);
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+
+.apply-btn {
+    background: linear-gradient(45deg, #ff7300, #ff0000);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px rgba(255, 115, 0, 1);
+    transition: 0.3s;
+}
+
+.apply-btn:hover {
+    box-shadow: 0px 0px 20px rgba(255, 115, 0, 1);
+    transform: scale(1.04);
+    background: #222;
+}
+
+.offer-code-label {
+    font-size: 14px;
+    color: #ff7300;
+}
+
+.offer-code {
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(255, 115, 0, 0.7);
+    transition: 0.3s;
+}
+
+.offer-code:hover {
+    box-shadow: 0px 0px 20px rgba(255, 115, 0, 1);
+    transform: scale(1.05);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 0 0 10px red;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Overlay for Dark Effect */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Share Buttons */
+.share-xx-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.share-xx-btn img {
+    width: 25px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 115, 0, 0.8));
+}
+
+.share-xx-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* Custom Notification */
+.custom-xx {
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 115, 0, 0.5);
+    border-radius: 10px;
+    z-index: 999;
+    width: 250px;
+    text-align: center;
+    color: white;
+}
+
+/* General Paragraph Styling */
+.xx p {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* Offer Code Label */
+.offer-code-label {
+    font-size: 12px;
+    color: #ff7300;
+    margin-bottom: 5px;
+}
+
+.loader {
+    border: 1px solid transparent;
+    border-top: 1px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear forwards;
+    background: black;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.floating-container {
+    z-index: 9999;
+}
+
+.xx {
+    z-index: 9998;
+}
+
+.overlay {
+    z-index: 9999;
+}
+
