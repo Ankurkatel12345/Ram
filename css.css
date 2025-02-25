@@ -303,7 +303,6 @@ body {
     .bottom-buttons button { flex: 1; text-align: center; padding: 15px; font-size: 18px; font-weight: bold; color: white; text-decoration: none; border: none; cursor: pointer; }
     .buy-now { background: #ff5733; }
     .contact { background: #28a745; display: flex; align-items: center; justify-content: center; gap: 8px; }
-</style>
 
 .contact, .buy-now, .next-btn {
     width: 30%;
